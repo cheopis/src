@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="arm_name" default="arm_1"/>
+
+  <!-- upload arm and gripper controller parameters -->
+  <rosparam file="$(find youbot_moveit)/config/youbot_controllers.yaml" command="load" ns="moveit"/> 
+ 
+  <!-- spawn arm controller -->
+  <node pkg="controller_manager" type="spawner" name="moveit_arm_controller_spawner"  args="moveit/arm_controller" respawn="false" output="screen" />
+
+  <!--<include file="$(find youbot_moveit)/launch/move_group.launch">
+    <arg name="load_gripper" value="$(arg load_gripper)" />
+  </include>-->
+</launch>
