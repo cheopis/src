@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find rt_gene)/launch/start_webcam.launch" />
+  <include file="$(find rt_gene)/launch/estimate_gaze.launch" />
+  <!--<include file="$(find rt_gene)/launch/estimate_blink.launch" />-->
+
+  <node pkg="eyegaze" type="$(arg file_name)" name="aplication" output="screen"/>
+  
+</launch>
+

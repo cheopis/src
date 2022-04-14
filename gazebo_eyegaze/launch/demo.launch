@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- launch world and robot -->
+  <include file="$(find youbot_gazebo_robot)/launch/youbot.launch" />
+
+  <!-- launch moveit with 8dof -->
+  <include file="$(find youbot_moveit_8dof)/launch/demo2.launch" />
+
+
+</launch>

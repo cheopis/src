@@ -1,0 +1,90 @@
+arm.
+id: 
+pre_grasp_posture: 
+  header: 
+    seq: 0
+    stamp: 0.000000000
+    frame_id: 
+  joint_names[]
+    joint_names[0]: panda_finger_joint1
+    joint_names[1]: panda_finger_joint2
+  points[]
+    points[0]: 
+        positions[]
+        positions[0]: 0.04
+        positions[1]: 0.04
+      velocities[]
+      accelerations[]
+      effort[]
+      time_from_start: 0.500000000
+grasp_posture: 
+  header: 
+    seq: 0
+    stamp: 0.000000000
+    frame_id: 
+  joint_names[]
+    joint_names[0]: panda_finger_joint1
+    joint_names[1]: panda_finger_joint2
+  points[]
+    points[0]: 
+        positions[]
+        positions[0]: 0
+        positions[1]: 0
+      velocities[]
+      accelerations[]
+      effort[]
+      time_from_start: 0.500000000
+grasp_pose: 
+  header: 
+    seq: 0
+    stamp: 0.000000000
+    frame_id: panda_link0
+  pose: 
+    position: 
+      x: 0.415
+      y: 0
+      z: 0.5
+    orientation: 
+      x: -0.653281
+      y: 0.270598
+      z: -0.653281
+      w: 0.270598
+grasp_quality: 0
+pre_grasp_approach: 
+  direction: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: panda_link0
+    vector: 
+      x: 1
+      y: 0
+      z: 0
+  desired_distance: 0.115
+  min_distance: 0.095
+post_grasp_retreat: 
+  direction: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: panda_link0
+    vector: 
+      x: 0
+      y: 0
+      z: 1
+  desired_distance: 0.25
+  min_distance: 0.1
+post_place_retreat: 
+  direction: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: 
+    vector: 
+      x: 0
+      y: 0
+      z: 0
+  desired_distance: 0
+  min_distance: 0
+max_contact_force: 0
+allowed_touch_objects[]

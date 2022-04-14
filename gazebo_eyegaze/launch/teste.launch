@@ -1,0 +1,19 @@
+<launch>
+  <arg name="image_topic" default="/image" /> 
+  <arg name="file_name" default= "tf_listner.py"/>
+  <arg name="image_transport" default= "raw"/>
+
+
+  <include file="$(find rt_gene)/launch/start_webcam.launch" />
+  <include file="$(find rt_gene)/launch/estimate_gaze.launch" />
+
+    <node name="image_view" pkg="image_view" type="image_view" respawn="false" output="screen">
+    <remap from="image" to="$(arg image_topic)"/>
+    <param name="autosize" value="true" />
+    <param name="image_transport" value="$(arg image_transport)" />
+  </node> 
+
+  <node pkg="gazebo_eyegaze" type="$(arg file_name)" name="teste" output="screen"/>
+	
+</launch>
+

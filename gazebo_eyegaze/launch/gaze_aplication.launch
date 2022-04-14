@@ -1,0 +1,11 @@
+<launch>
+  <arg name="file_name" default= "main.py"/>
+
+  <include file="$(find rt_gene)/launch/start_webcam.launch" />
+  <include file="$(find rt_gene)/launch/estimate_gaze.launch" />
+  <!--<include file="$(find rt_gene)/launch/estimate_blink.launch" />-->
+
+  <node pkg="gazebo_eyegaze" type="$(arg file_name)" name="aplication" output="screen"/>
+  
+</launch>
+
